@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_emoji/flutter_emoji.dart';
 import 'package:footer/footer.dart';
 import 'package:footer/footer_view.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'dart:html' as html;
 
 void main() {
@@ -234,7 +232,6 @@ class _MainPageState extends State<MainPage>
                                   style:
                                       Theme.of(context).textTheme.titleSmall),
                             ),
-
                           ],
                         ),
                         const Divider(
@@ -249,13 +246,13 @@ class _MainPageState extends State<MainPage>
                           height: 20,
                         ),
                         Image.asset(
-                          'asset/bbidol_image1.png',
+                          'asset/bbidori_1.gif',
                         ),
                         const SizedBox(
                           height: 15,
                         ),
                         Image.asset(
-                          'asset/bbidol_image2.png',
+                          'asset/bbidori_2.gif',
                         ),
                         _renderTitle(
                             context, '사용할 수 있는 프로그램들 (귀찮음의 여부에 따라 늘어날 수 있음)'),
@@ -352,9 +349,35 @@ class _MainPageState extends State<MainPage>
                                         '반영요청-DLL/REB 배포', context, false),
                                   ],
                                 ),
+                                TableRow(
+                                  children: [
+                                    _renderTableCell('인사', context, false),
+                                    _renderTableCell('전화번호조회', context, false),
+                                  ],
+                                ),
+                                TableRow(
+                                  children: [
+                                    _renderTableCell('썩다리의삶', context, false),
+                                    _renderTableCell('식단', context, false),
+                                  ],
+                                ),
                               ],
                             ),
                           ],
+                        ),
+
+                        _renderTitle(context, '설치 및 실행'),
+                        _renderProgramList(
+                            '다운로드 받은 Setup.exe를 실행하여 설치하세요.',
+                            context),
+                        _renderProgramList(
+                            '아래와 같은 화면이 뜬다면 추가정보 클릭후 실행을 누르시면 됩니다. (프로그램 인증서 비싸서 적용 못함.)',
+                            context),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Image.asset(
+                          'asset/how_to_install.gif',
                         ),
                         _renderTitle(context, '그 밖에..'),
                         const SizedBox(
@@ -378,7 +401,7 @@ class _MainPageState extends State<MainPage>
                                           'new tab');
                                     },
                                     child: Text(
-                                      '- 🎉🎊🎃썩다리의 삶 (https://rottenbridge.life) 식단을 볼 수 잇음',
+                                      '- 🎉🎊🎃썩다리의 삶 (https://rottenbridge.life)',
                                       style: Theme.of(context)
                                           .textTheme
                                           .bodyLarge
