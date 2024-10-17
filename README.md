@@ -1,6 +1,6 @@
 # bbidol
 
-A new Flutter project.
+회사에서 간단하게 만든 삐도리 다운로드 페이지 소스 코드
 
 ## Getting Started
 
